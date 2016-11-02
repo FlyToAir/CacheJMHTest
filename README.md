@@ -11,9 +11,14 @@
 * HashMapCache.java--HashMap实现的Cache
 
 ### 如何运行
-以运行默认并发等级的**Guava Cache**在并发线程数为**16**的情况下的执行步骤
+**首先**，编译打包：
 ```
 mvn clean install
+```
+接下来，执行指定的benchmark：
+
+以运行默认并发等级的**Guava Cache**在并发线程数为**16**的情况下为例，其执行方法为
+```
 java -jar target/benchmarks.jar GuavaDefault -t 16
 ```
 默认的热身次数为20，如果向指定热身次数，可以在执行指令末尾添加`-w`；默认的执行次数为100，自定义选项为`-i`
